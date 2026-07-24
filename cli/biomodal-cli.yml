@@ -1,0 +1,38 @@
+generated: '2026-07-18'
+method: searched
+source: https://software-docs.biomodal.com/en/latest/index.html
+name: biomodal CLI
+description: >-
+  First-party command-line tool that downloads, configures, and runs the biomodal
+  duet post-sequencing bioinformatics pipeline (genetic alignment, methylation
+  quantification, and variant calling) on the six-base genome data produced by the
+  duet evoC and duet +modC multiomics assays.
+docs: https://software-docs.biomodal.com/en/latest/index.html
+current_version: 2.0.0
+legacy_versions:
+  - 1.1.3
+install:
+  method: download-script
+  notes: >-
+    Downloaded and installed via the biomodal installation script per the software
+    documentation hub; the CLI then downloads the duet pipeline itself. Exact
+    package-registry distribution (docker/conda/pip) is not published on the public
+    docs.
+commands:
+  - command: biomodal init
+    description: Set up configuration files and download the duet pipeline.
+  - command: biomodal download
+    description: Retrieve new pipeline versions.
+  - command: biomodal run duet
+    description: Execute the duet post-sequencing pipeline on user FASTQ data.
+  - command: biomodal run duet --test
+    description: Validate system configuration by running the pipeline against test data.
+  - command: biomodal get diagnostics
+    description: Gather system and run diagnostics for support.
+related:
+  - name: modality XPLR
+    description: >-
+      Separate command-line analysis tool that consumes duet pipeline output for
+      deeper methylation exploration, statistics, and visualisation.
+  - portal: https://app.biomodal.com
+support: support@biomodal.com
